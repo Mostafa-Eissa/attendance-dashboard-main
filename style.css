@@ -1,0 +1,215 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* تعديل هذا الجزء لجعل الشعار في المنتصف */
+.header {
+  display: flex;
+  /* يجعل الشعار في المنتصف */
+  justify-content: center;
+  /* يتوسط الشعار أفقياً */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.main-logo {
+  max-width: 200px;
+  /* يمكنك تعديل هذا الحجم حسب رغبتك ليناسب الشعار */
+  height: auto;
+}
+
+/* نهاية الجزء المعدل */
+
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group select {
+  width: calc(100% - 20px);
+  /* Adjust for padding */
+  padding: 12px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  appearance: none;
+  /* Remove default select arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-6.5%200-12.3%203.2-16.1%208.1-3.9%204.9-4.8%2011.6-2.6%2017.8l128%20165.6c1.8%202.3%204.7%203.8%207.6%203.8s5.8-1.5%207.6-3.8l128-165.6c2.2-6.2%201.3-12.9-2.6-17.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 12px;
+}
+
+.form-group input[type="text"]::placeholder {
+  color: #bbb;
+}
+
+button[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .form-group input[type="text"],
+  .form-group select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  button[type="submit"] {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+}
+
+/* ... باقي الـ CSS كما هو ... */
+
+.form-group input[type="text"],
+.form-group select {
+  width: calc(100% - 20px);
+  /* Adjust for padding */
+  padding: 12px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  /* هذه الخصائص خاصة بالـ select ولن تؤثر على الـ input type="text" */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-6.5%200-12.3%203.2-16.1%208.1-3.9%204.9-4.8%2011.6-2.6%2017.8l128%20165.6c1.8%202.3%204.7%203.8%207.6%203.8s5.8-1.5%207.6-3.8l128-165.6c2.2-6.2%201.3-12.9-2.6-17.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 12px;
+}
+
+.form-group input[type="text"]::placeholder {
+  color: #bbb;
+}
+
+/* ... باقي الـ CSS كما هو ... */
+/* ... (بقية تنسيقات الـ CSS الموجودة لديك) ... */
+
+/* تنسيقات رسالة التحميل (Loading Overlay) */
+.loading-overlay {
+  position: fixed;
+  /* لتغطية الشاشة بالكامل */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* خلفية بيضاء شبه شفافة */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* لضمان ظهورها فوق كل شيء آخر */
+  visibility: hidden;
+  /* مخفية بشكل افتراضي */
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+  /* تأثير انتقال ناعم */
+  text-align: center;
+}
+
+.loading-overlay.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.loading-spinner {
+  border: 6px solid #f3f3f3;
+  /* لون الجزء الخلفي من الدائرة */
+  border-top: 6px solid #28a745;
+  /* لون الجزء الأمامي (الأخضر) */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  /* حركة الدوران */
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-overlay p {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* تنسيق زر الإرسال عندما يكون معطلاً */
+button[type="submit"]:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.8;
+}

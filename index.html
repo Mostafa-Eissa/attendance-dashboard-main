@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج تسجيل الحضور اليومي</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="TURNKEY.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="TURNKEY.png" alt="Turnkey Projects Logo" class="main-logo">
+        </div>
+        <h1>نموذج تسجيل الحضور اليومي</h1>
+
+        <form id="attendanceForm">
+            <div class="form-group">
+                <label for="fullName">الاسم بالكامل</label>
+                <input type="text" id="fullName" placeholder="الاسم بالكامل" required>
+            </div>
+
+            <div class="form-group">
+                <label for="jobTitle">الوظيفة</label>
+                <input type="text" id="jobTitle" placeholder="الوظيفة" required>
+            </div>
+
+            <div class="form-group">
+                <label for="assignmentType">نوع التعيين</label>
+                <select id="assignmentType" required>
+                    <option value="" disabled selected>-- اختر نوع التعيين --</option>
+                    <option value="سويدى">سويدى</option>
+                    <option value="بروفشنال">بروفشنال</option>
+                    <option value="ضحى">ضحى</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="department">القسم</label>
+                <select id="department" required>
+                    <option value="" disabled selected>-- اختر القسم --</option>
+                    <option value="قسم تنفيذ الكهرباء">قسم تنفيذ الكهرباء</option>
+                    <option value="قسم تنفيذ المدنى">قسم تنفيذ المدنى</option>
+                    <option value="قسم الجودة">قسم الجودة</option>
+                    <option value="قسم المخازن">قسم المخازن</option>
+                    <option value="قسم الصيانة">قسم الصيانة</option>
+                    <option value="قسم المساحة">قسم المساحة</option>
+                    <option value="قسم السلامة والصحة المهنية">قسم السلامة والصحة المهنية</option>
+                    <option value="الشؤون القانونية">الشؤون القانونية</option>
+                    <option value="مكتب فنى">مكتب فنى</option>
+                    <option value="الإداريين">الإداريين</option>
+                    <option value="المحاسبين">المحاسبين</option>
+                    <option value="DC">DC</option>
+                    <option value="خدمات مساعدة">خدمات مساعدة</option>
+                    <option value="السائقين">السائقين</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="project">اسم المشروع</label>
+                <select id="project" required>
+                    <option value="" disabled selected>-- اختر المشروع --</option>
+                    <option value="التحكم الاقليمي">التحكم الاقليمي</option>
+                    <option value="الحي الحكومي">الحي الحكومي</option>
+                    <option value="الحي الدبلوماسي">الحي الدبلوماسي</option>
+                    <option value="العلمين">العلمين</option>
+                    <option value="الفردوس">الفردوس</option>
+                    <option value="القاهرة 500">القاهرة 500</option>
+                    <option value="الكيان العسكري">الكيان العسكري</option>
+                    <option value="المنصورية">المنصورية</option>
+                    <option value="حياة كريمة الفيوم">حياة كريمة الفيوم</option>
+                    <option value="حياة كريمة المنيا">حياة كريمة المنيا</option>
+                    <option value="حياة كريمة أرمنت">حياة كريمة أرمنت</option>
+                    <option value="حياة كريمة أسنا">حياة كريمة أسنا</option>
+                    <option value="حياة كريمة أسوان">حياة كريمة أسوان</option>
+                    <option value="حياة كريمة زفتي">حياة كريمة زفتي</option>
+                    <option value="حياة كريمة صدفا">حياة كريمة صدفا</option>
+                    <option value="حياة كريمة مطوبس">حياة كريمة مطوبس</option>
+                    <option value="حياة كريمة منفلوط">حياة كريمة منفلوط</option>
+                    <option value="دهشور">دهشور</option>
+                    <option value="سانت كاترين">سانت كاترين</option>
+                    <option value="مونوريل زايد">مونوريل زايد</option>
+                    <option value="ميناء الدخيلة">ميناء الدخيلة</option>
+                    <option value="سوهاج">سوهاج</option>
+                    <option value="كفر غطاطي">كفر غطاطي</option>
+                    <option value="أبوقير">أبوقير</option>
+                    <option value="العبور">العبور</option>
+                    <option value="السويس الجديد">السويس الجديد</option>
+                    <option value="العاشر من رمضان">العاشر من رمضان</option>
+                    <option value="جاردينا">جاردينا</option>
+                </select>
+            </div>
+
+            <button type="submit">تسجيل</button>
+        </form>
+    </div>
+
+    <div id="loadingMessage" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>... جاري الإرسال، يرجى الانتظار ...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
